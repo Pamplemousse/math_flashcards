@@ -1,0 +1,23 @@
+\documentclass[avery5371,frame]{flashcards}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\cardfrontstyle[\large\slshape]{headings}
+\cardbackstyle{empty}
+
+\newcommand{\card}[3]{%
+  \begin{flashcard}[#1]{\textbf{\MakeUppercase{#2}}}
+    \vspace*{\fill}
+    \centering{#3}
+    \vspace*{\fill}
+  \end{flashcard}
+}
+
+\begin{document}
+  \cardfrontfoot{Théorie de l'information}
+  \input{formulas/information_theory}
+
+  \cardfrontfoot{Théorie de la complexité}
+  \input{formulas/complexity_theory}
+\end{document}
