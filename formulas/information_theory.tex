@@ -1,3 +1,35 @@
+% Définitions
+\card{définition}{loi binômiale}{%
+  Répétitions de n épreuves de Bernouilli indépendantes de probabilité de succès p. \\
+  X le nombre de succès parmi les n épreuves.
+  \begin{align*}
+    P(X=k) &= \binom{n}{n}\:p^k\:(1-p)^{n-k} \\
+    E[X] &= np \\
+    Var(X) &= np\:(1-p)
+  \end{align*}
+}
+
+\card{définition}{loi géométrique}{%
+  Répétitions de n épreuves de Bernouilli indépendantes de probabilité de succès p jusqu'à obtenir un succès. \\
+  \begin{align*}
+    P(X=k) &= (1-p)^{k-1}p \\
+    E[X] &= \frac{1}{p} \\
+    Var(X) &= \frac{1-p}{p^2}
+  \end{align*}
+}
+
+
+% Formules
+\card{formule}{divergence de Kullback}{%
+  \begin{align*}
+    p &= (p_{1}, ..., p_{m}) \\
+    q &= (q_{1}, ..., q_{m})
+  \end{align*}
+  \begin{math}
+    D(p\:||\:q) = \sum_{i=2}^{m} p_{i} \log_2{\frac{p_{i}}{q_{i}}}
+  \end{math}
+}
+
 \card{formule}{espérance}{%
   \begin{align*}
     E[X] &= E[(X - E[X])^2] \\
@@ -11,8 +43,21 @@
   \end{math}
 }
 
+\card{formule}{entropie jointe}{%
+  \begin{math}
+    H(X, Y) = \sum_{x} P(X=x, Y=y) \log_2{\frac{1}{P(X=x, Y=y)}}
+  \end{math}
+}
+
+\card{formule}{entropie conditionnelle}{%
+  \begin{math}
+    H(X | Y) = \sum_{x} P(X=x, Y=y) \log_2{\frac{1}{P(X=x | Y=y)}}
+  \end{math}
+}
+
 \card{formule}{information mutuelle}{%
   \begin{math}
     I(X, Y) = H(X) + H(Y) - H(X, Y)
   \end{math}
 }
+
